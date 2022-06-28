@@ -41,14 +41,13 @@ public class PeopleBuilder {
         if (surname == null) {
             throw new IllegalStateException("Поле \"surname\" не должно быть пустым!");
         }
+        People p;
         if (age.isEmpty()) {
-            People p = new People(name, surname);
-            p.setAddress(address);
-            return p;
+            p = new People(name, surname);
         } else {
-            People p = new People(name, surname, age.getAsInt());
-            p.setAddress(address);
-            return p;
+            p = new People(name, surname, age.getAsInt());
         }
+        p.setAddress(address);
+        return p;
     }
 }

@@ -10,14 +10,12 @@ public class People {
         this.name = name;
         this.surname = surname;
         this.age = OptionalInt.empty();
-        //this.address = "";
     }
 
     protected People(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = OptionalInt.of(age);
-        //this.address = "";
     }
 
     protected People(String name, String surname, String address) {

@@ -12,14 +12,12 @@ public class Main {
         System.out.println("У " + mom + " есть сын, " + son);
 
         try {
-            // Не хватает обяхательных полей
             new PeopleBuilder().build();
         } catch (IllegalStateException e) {
             e.printStackTrace();
         }
 
         try {
-            // Возраст недопустимый
             new PeopleBuilder().setAge(-100).build();
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
